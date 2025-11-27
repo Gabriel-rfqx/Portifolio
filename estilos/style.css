@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Changa:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --Midnight-Blue: #0A0F2D; /*Cor base de telas, backgrounds profundos*/
+    --Cyber-Indigo:	#1A1F4A;	/*Backgrounds secundários, cards*/
+    --Electric-Blue:	#1F6BFF;	/*Componentes principais, botões primários*/
+    --Neon-Sapphire:	#2D9CFA;	/*Textos chamativos, ícones*/
+    --Dark-Purple: #2A003E;	/*Backgrounds misteriosos, seções especiais*/
+    --Royal-Neo-Purple: #6000A8;	/*Elementos secundários, menus*/
+    --Hyper-Violet: #9D00FF;	/*Destaques e hover states*/
+    --Pinkish-Violet: #E042FF;	/*Acentos vibrantes*/
+    --Neon-Magenta:	#FF00C8;	/*Destaques importantes, CTA*/
+    --Cyber-Pink:	#FF4DD8;	/*Ícones, detalhes decorativos*/
+    --Aqua-Neon:	#00F0FF;	/*Linhas, luzes, efeitos glow*/
+    --Laser-Green:	#1AFF8C;	/*Feedback positivo, indicadores*/
+    --Shadow-Black:	#050505;	/*Fundo principal*/
+    --Gunmetal:	#1A1A1D;	/*Painéis e containers*/
+    --Dark-Steel:	#2E2E33;	/*Divisores, bordas*/
+    --Cyber-Silver:	#C9CED6;	/*Texto leve, placeholder*/
+    --Erro-Neon-Red:	#FF0055;
+    --Aviso-Amber-Neon:	#FFBE2E;
+    --Sucesso-Green-Lime:	#00FF7A;
+
+    /*
+    Background: #0A0F2D
+
+    Texto principal: #C9CED6
+
+    Botão primário: #1F6BFF
+
+    Hover do botão: #2D9CFA
+
+    Destaque importante: #FF00C8
+
+    Borda/linha neon: #00F0FF
+    */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0A0F2D, #6000A8, #FF00C8);
+}
+
+p{
+    color: var(--Cyber-Silver);
+    text-align: justify;
+    font-family: "Saira Semi Condensed", sans-serif;
+}
+
+
+
+
+header{
+    padding: 10px;
+    position: relative;
+}
+header #menu{
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+header #menu a{
+    font-family: "Audiowide", sans-serif;
+    text-decoration: none;
+    color: var(--Neon-Sapphire);
+    padding: 10px 20px;
+    font-size: 1.4em;
+    font-weight: 900;
+    transition: 0.4s;
+}
+header #menu a:hover{
+    color: var(--Cyber-Silver);
+    transition: 0.4s;
+}
+header #apresentacao{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 95vh;
+}
+header #apresentacao  h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    color: var(--Electric-Blue);
+    text-align: center;
+}
+header #apresentacao  p{
+    font-size: 1.2em;
+}
+header #apresentacao > div {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+header #apresentacao > div .redes{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+header #apresentacao > div .redes a{
+    font-family: "Changa", sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25em;
+    color: var(--Sucesso-Green-Lime);
+    text-decoration: none;
+}
+header #apresentacao > div .redes img{
+    height: 40px;
+}
+header #apresentacao > div > img{
+    height: 500px;
+    width: 380px;
+    border: 1px solid var(--Aviso-Amber-Neon);
+    border-radius: 50%;
+    animation: fotoluzes 2s ease-out 0.5s infinite alternate ;
+    
+}
+@keyframes fotoluzes {
+    0%{
+        box-shadow: 0  0 3px rgba(255, 255, 255, 0.685);
+    }
+    100%{
+        box-shadow: 0  0 10px rgba(255, 255, 255, 0.801);
+    }
+}
+
+main{
+    background-color: var(--Cyber-Indigo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
