@@ -64,7 +64,7 @@ header{
 }
 header #menu{
     width: 95%;
-    margin: 20px auto;
+    margin: 18px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -73,54 +73,68 @@ header #menu{
 header #menu a{
     font-family: "Audiowide", sans-serif;
     text-decoration: none;
-    color: var(--Neon-Sapphire);
+    color: #2ddcfa;
     padding: 10px 20px;
     font-size: 1.4em;
-    font-weight: 900;
+ 
     transition: 0.4s;
+    text-shadow: -1px 1px 1px #FFF
 }
 header #menu a:hover{
     color: var(--Cyber-Silver);
     transition: 0.4s;
     transform: scale(1.1);
+    text-shadow: -1px 1px 1px #000000
 }
 header #apresentacao{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    display: grid; 
+    grid-template: 10% repeat(2, 35%) 15% / 25% 50% 25%;
+    justify-items: center;
     height: 95vh;
 }
 header #apresentacao  h1{
+    grid-area: 1 / 2 / span 1/ span 1;
+    align-self: center;
     font-family: "Orbitron", sans-serif;
     font-weight: 600;
-    color: var(--Electric-Blue);
+    color: var(--Neon-Sapphire);
     text-align: center;
-}
-header #apresentacao  p{
-    width: 95%;
-    margin: auto;
-    font-size: 1.2em;
-    background-color: #1a1a1d80;
-    padding: 10px;
-    border-radius: 18px;
-    box-shadow: 0.5px 0.5px 4px black;
-    backdrop-filter: blur(10px);
-}
-header #apresentacao > div {
-    height: 70%;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    text-shadow: 1px 1px 1px #1F6BFF, -1px -1px 1px #FFF, -1px 1px 1px black, 1px -1px 1px #E042FF;
 }
 
-header #apresentacao > div .redes{
+header #apresentacao > img{
+    grid-area: 2 / 2 / span 2 / span 1;
+    align-self: center;
+    height: 500px;
+    width: 380px;
+    border: 1px solid var(--Aviso-Amber-Neon);
+    border-radius: 50%;
+    animation: fotoluzes 2s ease-out 0.5s infinite alternate ;
+    
+}
+@keyframes fotoluzes {
+    0%{
+        box-shadow: 0  0 3px rgba(255, 255, 255, 0.685);
+    }
+    100%{
+        box-shadow: 0  0 20px rgba(255, 255, 255, 0.801);
+    }
+}
+header #apresentacao div:nth-of-type(1){
+    grid-area: 2 / 1 / span 2 / span 1;
+}
+header #apresentacao div:nth-of-type(2){
+    grid-area: 2 / -2 / span 2 / span 1;
+}
+header #apresentacao .redes{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
 }
-header #apresentacao > div .redes a{
+header #apresentacao .redes img{
+    height: 40px;
+}
+header #apresentacao .redes a{
     font-family: "Changa", sans-serif;
     font-weight: 600;
     display: flex;
@@ -137,29 +151,21 @@ header #apresentacao > div .redes a{
     padding: 4px 10px;
     transition: 0.3s;
 }
-header #apresentacao > div .redes a:hover{
+header #apresentacao .redes a:hover{
     background-color: rgba(62, 62, 63, 0.502);
     transform: scale(1.1);
     transition: 0.3s;
 }
-header #apresentacao > div .redes img{
-    height: 40px;
-}
-header #apresentacao > div > img{
-    height: 500px;
-    width: 380px;
-    border: 1px solid var(--Aviso-Amber-Neon);
-    border-radius: 50%;
-    animation: fotoluzes 2s ease-out 0.5s infinite alternate ;
-    
-}
-@keyframes fotoluzes {
-    0%{
-        box-shadow: 0  0 3px rgba(255, 255, 255, 0.685);
-    }
-    100%{
-        box-shadow: 0  0 20px rgba(255, 255, 255, 0.801);
-    }
+header #apresentacao  p{
+    grid-area: 4 / 1 / span 1 / -1;
+    width: 95%;
+    margin: auto;
+    font-size: 1.2em;
+    background-color: #1a1a1d80;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0.5px 0.5px 4px black;
+    backdrop-filter: blur(10px);
 }
 
 main{
