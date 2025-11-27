@@ -45,7 +45,7 @@
 body{
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0A0F2D, #6000A8, #FF00C8);
+    
 }
 
 p{
@@ -58,7 +58,8 @@ p{
 
 
 header{
-    padding: 10px;
+    background:  url("../imagens/Fundo.png") no-repeat top center/cover;
+    padding-top: 10px;
     position: relative;
 }
 header #menu{
@@ -81,6 +82,7 @@ header #menu a{
 header #menu a:hover{
     color: var(--Cyber-Silver);
     transition: 0.4s;
+    transform: scale(1.1);
 }
 header #apresentacao{
     display: flex;
@@ -96,6 +98,11 @@ header #apresentacao  h1{
 }
 header #apresentacao  p{
     font-size: 1.2em;
+    background-color: #1a1a1d80;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0.5px 0.5px 4px black;
+    backdrop-filter: blur(10px);
 }
 header #apresentacao > div {
     height: 70%;
@@ -116,10 +123,22 @@ header #apresentacao > div .redes a{
     font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     font-size: 1.25em;
     color: var(--Sucesso-Green-Lime);
     text-decoration: none;
+    background-color: #1a1a1d80;
+    box-shadow: 0.5px 0.5px 4px rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 4px 10px;
+    transition: 0.3s;
+}
+header #apresentacao > div .redes a:hover{
+    background-color: rgba(62, 62, 63, 0.502);
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 header #apresentacao > div .redes img{
     height: 40px;
@@ -137,16 +156,13 @@ header #apresentacao > div > img{
         box-shadow: 0  0 3px rgba(255, 255, 255, 0.685);
     }
     100%{
-        box-shadow: 0  0 10px rgba(255, 255, 255, 0.801);
+        box-shadow: 0  0 20px rgba(255, 255, 255, 0.801);
     }
 }
 
 main{
-    background-color: var(--Cyber-Indigo);
+    background: linear-gradient(135deg, #0A0F2D, #6000A8, #FF00C8);
 }
-
-
-
 
 
 
