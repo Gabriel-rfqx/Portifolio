@@ -97,6 +97,8 @@ header #apresentacao  h1{
     text-align: center;
 }
 header #apresentacao  p{
+    width: 95%;
+    margin: auto;
     font-size: 1.2em;
     background-color: #1a1a1d80;
     padding: 10px;
@@ -171,4 +173,6 @@ main{
 
 
 
-
+@media screen and (max-width: 1024px){
+    
+}
