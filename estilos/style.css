@@ -64,7 +64,7 @@ header{
 }
 header #menu{
     width: 95%;
-    margin: 18px auto;
+    margin: 18px auto 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -76,7 +76,6 @@ header #menu a{
     color: #2ddcfa;
     padding: 10px 20px;
     font-size: 1.4em;
- 
     transition: 0.4s;
     text-shadow: -1px 1px 1px #FFF
 }
@@ -86,13 +85,13 @@ header #menu a:hover{
     transform: scale(1.1);
     text-shadow: -1px 1px 1px #000000
 }
-header #apresentacao{
+#apresentacao{
     display: grid; 
     grid-template: 10% repeat(2, 35%) 15% / 25% 50% 25%;
     justify-items: center;
     height: 95vh;
 }
-header #apresentacao  h1{
+#apresentacao  h1{
     grid-area: 1 / 2 / span 1/ span 1;
     align-self: center;
     font-family: "Orbitron", sans-serif;
@@ -102,7 +101,7 @@ header #apresentacao  h1{
     text-shadow: 1px 1px 1px #1F6BFF, -1px -1px 1px #FFF, -1px 1px 1px black, 1px -1px 1px #E042FF;
 }
 
-header #apresentacao > img{
+#apresentacao > img{
     grid-area: 2 / 2 / span 2 / span 1;
     align-self: center;
     height: 500px;
@@ -120,29 +119,25 @@ header #apresentacao > img{
         box-shadow: 0  0 20px rgba(255, 255, 255, 0.801);
     }
 }
-header #apresentacao div:nth-of-type(1){
+#apresentacao div:nth-of-type(1){
     grid-area: 2 / 1 / span 2 / span 1;
 }
-header #apresentacao div:nth-of-type(2){
+#apresentacao div:nth-of-type(2){
     grid-area: 2 / -2 / span 2 / span 1;
 }
-header #apresentacao .redes{
+#apresentacao .redes{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
 }
-header #apresentacao .redes img{
+#apresentacao .redes img{
     height: 40px;
 }
-header #apresentacao .redes a{
-    font-family: "Changa", sans-serif;
-    font-weight: 600;
+#apresentacao .redes a{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 1.25em;
-    color: var(--Sucesso-Green-Lime);
     text-decoration: none;
     background-color: #1a1a1d80;
     box-shadow: 0.5px 0.5px 4px rgb(255, 255, 255);
@@ -151,12 +146,18 @@ header #apresentacao .redes a{
     padding: 4px 10px;
     transition: 0.3s;
 }
-header #apresentacao .redes a:hover{
+#apresentacao .redes a p{
+   font-family: "Changa", sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
+    color: var(--Sucesso-Green-Lime);
+}
+#apresentacao .redes a:hover{
     background-color: rgba(62, 62, 63, 0.502);
     transform: scale(1.1);
     transition: 0.3s;
 }
-header #apresentacao  p{
+#apresentacao > p{
     grid-area: 4 / 1 / span 1 / -1;
     width: 95%;
     margin: auto;
@@ -167,13 +168,17 @@ header #apresentacao  p{
     box-shadow: 0.5px 0.5px 4px black;
     backdrop-filter: blur(10px);
 }
-
 main{
     background: linear-gradient(135deg, #0A0F2D, #6000A8, #FF00C8);
 }
 
-
-
+main #conteudo{
+    display: flex;
+    flex-flow: column nowrap;
+}
+main p{
+    font-size: 5em;
+}
 
 
 
@@ -183,4 +188,48 @@ main{
 
 @media (min-width: 768px) and (max-width: 1024px){
     
+}
+@media screen and (min-width: 1080px){
+    main{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto 380px 1fr auto;
+    }
+    #apresentacao{
+        position: relative;
+        grid-column: 2 / 3;
+        grid-template:  1fr 4fr 3fr 1fr / 1fr;
+    }
+    #apresentacao h1{grid-area: 1 / 1 / span 1 / -1;}
+    #apresentacao > img{
+        grid-area: 2 / 1 / span 1 / -1;
+        height: 400px;
+        width: 340px;
+    }
+    #apresentacao p {grid-area: 3 / 1 / span 1 / -1;}
+    #apresentacao .redes{
+                flex-flow: row nowrap;
+    }
+    #apresentacao .redes p {
+        display: none;
+    }
+
+    #apresentacao div:nth-last-of-type(1){
+        grid-area: 4 / 1 / span 1 / -1;
+        position: absolute;
+        left: 5%;
+        gap: 38px;
+
+    }
+    #apresentacao div:nth-last-of-type(2){
+        grid-area: 4 / 1 / span 1 / -1;
+        position: absolute;
+        right: 5%;
+        gap: 38px;
+
+    }
+    #conteudo{
+        grid-column: 3 / 4;
+
+    }
 }
